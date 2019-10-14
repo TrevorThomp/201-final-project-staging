@@ -56,6 +56,10 @@ As a player, I want my game state to persist, so that if I take a break or accid
 
 	MVP: Store game data into local storage based on user.
 
+As a player, I want to learn more about who created the game, so I would like to see an "about game creators" page
+
+  MVP: Create an About Creates HTML Page with information about the game creators.
+
 Stretch User Stories
 
 As a player, I want to check my mood, so that I know if I should take a break from playing. 
