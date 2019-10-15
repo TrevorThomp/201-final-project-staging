@@ -72,6 +72,14 @@ var updateScore = function() {
   computerScore.textContent = compScore;
 };
 
+var winRound = function () {
+  if (playerScore === 5) {
+    alert('You Won!');
+  } else if (compScore === 5) {
+    alert('You Lose!');
+  }
+};
+
 var playGame = function(e) {
   var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   var randomNumber = Math.floor(Math.random() * 5);
@@ -80,6 +88,7 @@ var playGame = function(e) {
   var userChoice = e.target.id;
   var bottomChatHeader = document.getElementById('bottomChatHeader');
   var bottomChatText = document.getElementById('bottomChatText');
+
   // Checks for draw
   if (userChoice === computerChoice) {
     bottomChatHeader.textContent = 'Draw';
