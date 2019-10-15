@@ -15,11 +15,19 @@
 <body>
 
   <div id="landing-container">
-    <h1>The Arcade</h1>
-    <label for="username">Enter your username:</label>
-    <input type="text" name="username">
-    <button>Enter Arcade</button>
+    <h1>THE ARCADE</h1>
+    <form id="enterarcade">
+      <fieldset>
+        <label>
+          <span>ENTER YOUR USERNAME</span>
+          <input id="name" type="string" name='userName' required='true'/>
+        </label>
+        </br>
+        <input type="submit" value="ENTER ARCADE">
+      </fieldset>
+    </form>
   </div>
+
 
   <main>
     <div id="showdown">
@@ -42,6 +50,7 @@
   <h2 id="bottomChatHeader"></h2>
   <p id="bottomChatText"></p>
 </div>
+
 
 </body>
 
