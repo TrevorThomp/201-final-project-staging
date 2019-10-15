@@ -1,8 +1,8 @@
 'use strict';
 
 // Global Variables
-var userScore = 0;
-var computerScore = 0;
+var playerScore = 0;
+var compScore = 0;
 var numberOfRounds = 0;
 var rock = document.getElementById('rock');
 var paper = document.getElementById('paper');
@@ -65,6 +65,13 @@ function submitForm(e){
 var form = document.getElementById('enterarcade');
 form.addEventListener('submit', submitForm);
 
+var updateScore = function() {
+  var userScore = document.getElementById('userScore');
+  var computerScore = document.getElementById('computerScore');
+  userScore.textContent = playerScore;
+  computerScore.textContent = compScore;
+};
+
 var playGame = function(e) {
   var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   var randomNumber = Math.floor(Math.random() * 5);
@@ -84,22 +91,26 @@ var playGame = function(e) {
     if (computerChoice === 'scissors') {
       bottomChatHeader.textContent = 'Rock crushes Scissors';
       bottomChatText.textContent = 'User Wins';
-      userScore++;
+      playerScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'lizard') {
       bottomChatHeader.textContent = 'Rock crushes Lizard';
       bottomChatText.textContent = 'User Wins';
-      userScore++;
+      playerScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'paper') {
       bottomChatHeader.textContent = 'Paper covers Rock';
       bottomChatText.textContent = 'Computer Wins';
-      computerScore++;
+      compScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'spock') {
       bottomChatHeader.textContent = 'Spock vaporizes Rock';
       bottomChatText.textContent = 'Computer Wins';
-      computerScore++;
+      compScore++;
+      updateScore();
       return;
     }
   }
@@ -109,22 +120,26 @@ var playGame = function(e) {
     if (computerChoice === 'paper') {
       bottomChatHeader.textContent = 'Scissors cuts Paper';
       bottomChatText.textContent = 'User Wins';
-      userScore++;
+      playerScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'lizard') {
       bottomChatHeader.textContent = 'Scissors decapitates Lizard';
       bottomChatText.textContent = 'User Wins';
-      userScore++;
+      playerScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'rock') {
       bottomChatHeader.textContent = 'Rock crushes Scissors';
       bottomChatText.textContent = 'Computer Wins';
-      computerScore++;
+      compScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'spock') {
       bottomChatHeader.textContent = 'Spock smashes Scissors';
       bottomChatText.textContent = 'Computer Wins';
-      computerScore++;
+      compScore++;
+      updateScore();
       return;
     }
   }
@@ -134,22 +149,26 @@ var playGame = function(e) {
     if (computerChoice === 'rock') {
       bottomChatHeader.textContent = 'Paper covers Rock';
       bottomChatText.textContent = 'User Wins';
-      userScore++;
+      playerScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'spock') {
       bottomChatHeader.textContent = 'Paper disapproves Spock';
       bottomChatText.textContent = 'User Wins';
-      userScore++;
+      playerScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'scissors') {
       bottomChatHeader.textContent = 'Scissors cuts Paper';
       bottomChatText.textContent = 'Computer Wins';
-      computerScore++;
+      compScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'lizard') {
       bottomChatHeader.textContent = 'Lizard eats Paper';
       bottomChatText.textContent = 'Computer Wins';
-      computerScore++;
+      compScore++;
+      updateScore();
       return;
     }
   }
@@ -159,22 +178,26 @@ var playGame = function(e) {
     if (computerChoice === 'spock') {
       bottomChatHeader.textContent = 'Lizard poisons Spock';
       bottomChatText.textContent = 'User Wins';
-      userScore++;
+      playerScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'paper') {
       bottomChatHeader.textContent = 'Lizard eats Paper';
       bottomChatText.textContent = 'User Wins';
-      userScore++;
+      playerScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'scissors') {
       bottomChatHeader.textContent = 'Scissors decapitates Lizard';
       bottomChatText.textContent = 'Computer Wins';
-      computerScore++;
+      compScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'rock') {
       bottomChatHeader.textContent = 'Rock crushes Lizard';
       bottomChatText.textContent = 'Computer Wins';
-      computerScore++;
+      compScore++;
+      updateScore();
       return;
     }
   }
@@ -184,22 +207,26 @@ var playGame = function(e) {
     if (computerChoice === 'scissors') {
       bottomChatHeader.textContent = 'Spock smashes Scissors';
       bottomChatText.textContent = 'User Wins';
-      userScore++;
+      playerScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'rock') {
       bottomChatHeader.textContent = 'Spock vaporizes Rock';
       bottomChatText.textContent = 'User Wins';
-      userScore++;
+      playerScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'paper') {
       bottomChatHeader.textContent = 'Paper disapproves Spock';
       bottomChatText.textContent = 'Computer Wins';
-      computerScore++;
+      compScore++;
+      updateScore();
       return;
     } else if (computerChoice === 'lizard') {
       bottomChatHeader.textContent = 'Lizard poisons Spock';
       bottomChatText.textContent = 'Computer Wins';
-      computerScore++;
+      compScore++;
+      updateScore();
       return;
     }
   }
