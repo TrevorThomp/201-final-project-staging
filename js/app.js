@@ -100,6 +100,7 @@ var playGame = function(e) {
       bottomChatText.textContent = 'User Wins';
       playerScore++;
       updateScore();
+
     } else if (computerChoice === 'lizard') {
       bottomChatHeader.textContent = 'Rock crushes Lizard';
       bottomChatText.textContent = 'User Wins';
