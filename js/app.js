@@ -58,7 +58,7 @@ var playGame = function(e) {
   var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   var randomNumber = Math.floor(Math.random() * 5);
   var computerChoice = choices[randomNumber];
-  
+
   var userChoice = e.target.id;
   var bottomChatHeader = document.getElementById('bottomChatHeader');
   var bottomChatText = document.getElementById('bottomChatText');
