@@ -8,7 +8,7 @@ var paper = document.getElementById('paper');
 var scissors = document.getElementById('scissors');
 var lizard = document.getElementById('lizard');
 var spock = document.getElementById('spock');
-// var bottomChat = document.getElementById();
+// var bottomChat = document.getElementById(); <<< I commented this out for the moment because the event handler for images choices doesn't work when this isn't commented out, at the moment - Holly
 
 
 //Preload High Score Array
@@ -76,70 +76,33 @@ var playGame = function(userChoice) {
   }
 };
 
-var playerChoiceImgEl = document.getElementById('player-choice'); // empty image holder
+// Gets initally empty image that will get replaced by the user's choice
+var playerChoiceImgEl = document.getElementById('player-choice');
 
+// Adds listeners to each static image from index.html
 rock.addEventListener('click', handleClickOnImg);
 paper.addEventListener('click', handleClickOnImg);
 scissors.addEventListener('click', handleClickOnImg);
 lizard.addEventListener('click', handleClickOnImg);
 spock.addEventListener('click', handleClickOnImg);
 
+// Says what will happen when you click on any particular image
 function handleClickOnImg(event) {
   var choice = event.target.id;
   if(choice === 'rock') {
     playerChoiceImgEl.src = '../img/glowrock.svg';
-    // rockTimesPicked++ if we do distribution stretch goal
+    playerChoiceImgEl.id = 'rock-choice';
   } else if(choice === 'paper') {
     playerChoiceImgEl.src = '../img/glowpaper.svg';
-    // paperTimesPicked++ if we do distribution stretch goal
+    playerChoiceImgEl.id = 'paper-choice';
   } else if(choice === 'scissors') {
     playerChoiceImgEl.src = '../img/glowscissors.svg';
-    // scissorsTimesPicked++ if we do distribution stretch goal
+    playerChoiceImgEl.id = 'scissors-choice';
   } else if(choice === 'lizard') {
     playerChoiceImgEl.src = '../img/glowlizard.svg';
-    // lizardTimesPicked++ if we do distribution stretch goal
+    playerChoiceImgEl.id = 'lizard-choice';
   } else if(choice === 'spock') {
     playerChoiceImgEl.src = '../img/glowspock.svg';
-    // spockTimesPicked++ if we do distribution stretch goal
+    playerChoiceImgEl.id = 'spock-choice';
   }
 }
-
-
-// var handleClickOnImg = function(event){
-//   var ul = document.getElementById('ul-voteresults');
-//   if(totalClicks > rounds - 2) {
-//     imgDivTag.removeEventListener('click', handleClickOnImg);
-//   }
-//   if(totalClicks < rounds) {
-//     var imageClicked = event.target;
-//     var id = imageClicked.id;
-//     if(id === 'img01' || id === 'img02' || id === 'img03'){
-//       if (id === 'img01'){
-//         img01OnThePage.clicks ++;
-//       }
-//       if (id === 'img02'){
-//         img02OnThePage.clicks ++;
-//       }
-//       if (id === 'img03'){
-//         img03OnThePage.clicks ++;
-//       }
-//       img01OnThePage.timesShown ++;
-//       img02OnThePage.timesShown ++;
-//       img03OnThePage.timesShown ++;
-//       pickNewImages();
-//     }
-//   }
-//   updateLocalStorage();
-//   totalClicks ++;
-//   if(totalClicks === rounds) {
-//     for (var i = 0; i < ProductImage.allImages.length; i++) {
-//       var liData = document.createElement('li');
-//       liData.setAttribute('class', 'li-results');
-//       liData.textContent = `${ProductImage.allImages[i].name}: Appearances ${ProductImage.allImages[i].timesShown} | Clicks ${ProductImage.allImages[i].clicks}`;
-//       ul.appendChild(liData);
-//     }
-//     alert('Thank you for participating!');
-//     makeChart();
-//     localStorage.clear(); // Credit: Travis Skyles
-//   }
-// };
