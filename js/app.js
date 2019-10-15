@@ -84,7 +84,6 @@ var playGame = function(e) {
   var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   var randomNumber = Math.floor(Math.random() * 5);
   var computerChoice = choices[randomNumber];
-
   var userChoice = e.target.id;
   var bottomChatHeader = document.getElementById('bottomChatHeader');
   var bottomChatText = document.getElementById('bottomChatText');
@@ -239,6 +238,21 @@ var playGame = function(e) {
       return;
     }
   }
+  
+  // Gets initally empty image that will get replaced by the computer's choice
+  var computerChoiceImgEl = document.getElementById('computer-choice');
+  // Dictates what image will display based on the computer's choice and assigns the img tag a new ID
+  if(computerChoice === 'rock') {
+    computerChoiceImgEl.src = '../img/glowrock.svg';
+  } else if(computerChoice === 'paper') {
+    computerChoiceImgEl.src = '../img/glowpaper.svg';
+  } else if(computerChoice === 'scissors') {
+    computerChoiceImgEl.src = '../img/glowscissors.svg';
+  } else if(computerChoice === 'lizard') {
+    computerChoiceImgEl.src = '../img/glowlizard.svg';
+  } else if(computerChoice === 'spock') {
+    computerChoiceImgEl.src = '../img/glowspock.svg';
+  }
 };
 
 // Gets initally empty image that will get replaced by the user's choice
@@ -260,7 +274,7 @@ lizard.addEventListener('click', playGame);
 spock.addEventListener('click', handleClickOnImg);
 spock.addEventListener('click', playGame);
 
-// Says what will happen when you click on any particular image
+// Dictates what image will display based on the player's choice and assigns the img tag a new ID
 function handleClickOnImg(event) {
   var choice = event.target.id;
   if(choice === 'rock') {
