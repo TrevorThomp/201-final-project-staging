@@ -22,12 +22,12 @@ h1 {
 
 
 
-#spacer {
+#div-weapons {
   margin-top: 100px;
   text-align: center;
 }
 
-#weapons {
+#ul-weapons {
   list-style-type: none;
 }
 
@@ -37,6 +37,7 @@ li {
 
 .choice {
   height: 100px;
+  cursor: pointer;
 }
 
 p {
