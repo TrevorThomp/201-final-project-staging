@@ -47,6 +47,11 @@ var smackTalkArr = [
   'KEEP TALKING, SOMEDAY YOU\'LL SAY SOMETHING INTELLIGENT!'
 ];
 
+var smackTalkDisplay = function() {
+  var textDisplay = document.getElementById('array-text');
+  var randomNumber = Math.floor(Math.random() * 5);
+  textDisplay.textContent = smackTalkArr[randomNumber];
+};
 
 //Create Constructor Function
 var allPlayers = [];
@@ -100,6 +105,7 @@ var playGame = function(e) {
       bottomChatText.textContent = 'User Wins';
       playerScore++;
       updateScore();
+
     } else if (computerChoice === 'lizard') {
       bottomChatHeader.textContent = 'Rock crushes Lizard';
       bottomChatText.textContent = 'User Wins';
@@ -110,11 +116,13 @@ var playGame = function(e) {
       bottomChatText.textContent = 'Computer Wins';
       compScore++;
       updateScore();
+      smackTalkDisplay();
     } else if (computerChoice === 'spock') {
       bottomChatHeader.textContent = 'Spock vaporizes Rock';
       bottomChatText.textContent = 'Computer Wins';
       compScore++;
       updateScore();
+      smackTalkDisplay();
     }
   }
 
@@ -135,11 +143,13 @@ var playGame = function(e) {
       bottomChatText.textContent = 'Computer Wins';
       compScore++;
       updateScore();
+      smackTalkDisplay();
     } else if (computerChoice === 'spock') {
       bottomChatHeader.textContent = 'Spock smashes Scissors';
       bottomChatText.textContent = 'Computer Wins';
       compScore++;
       updateScore();
+      smackTalkDisplay();
     }
   }
 
@@ -160,11 +170,13 @@ var playGame = function(e) {
       bottomChatText.textContent = 'Computer Wins';
       compScore++;
       updateScore();
+      smackTalkDisplay();
     } else if (computerChoice === 'lizard') {
       bottomChatHeader.textContent = 'Lizard eats Paper';
       bottomChatText.textContent = 'Computer Wins';
       compScore++;
       updateScore();
+      smackTalkDisplay();
     }
   }
 
@@ -185,11 +197,13 @@ var playGame = function(e) {
       bottomChatText.textContent = 'Computer Wins';
       compScore++;
       updateScore();
+      smackTalkDisplay();
     } else if (computerChoice === 'rock') {
       bottomChatHeader.textContent = 'Rock crushes Lizard';
       bottomChatText.textContent = 'Computer Wins';
       compScore++;
       updateScore();
+      smackTalkDisplay();
     }
   }
 
@@ -210,11 +224,13 @@ var playGame = function(e) {
       bottomChatText.textContent = 'Computer Wins';
       compScore++;
       updateScore();
+      smackTalkDisplay();
     } else if (computerChoice === 'lizard') {
       bottomChatHeader.textContent = 'Lizard poisons Spock';
       bottomChatText.textContent = 'Computer Wins';
       compScore++;
       updateScore();
+      smackTalkDisplay();
     }
   }
 
