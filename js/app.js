@@ -55,7 +55,6 @@ var CreatePlayer = function(userName){
   allPlayers.push(this);
 };
 
-console.log(allPlayers);
 function submitForm(e){
   e.preventDefault();
   var name = e.target.name.value;
@@ -64,14 +63,7 @@ function submitForm(e){
 
 var form = document.getElementById('enterarcade');
 form.addEventListener('submit', submitForm);
-console.log(allPlayers);
 
-function computerChoice() {
-  var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
-  var randomNumber = Math.floor(Math.random() * 5);
-  return choices[randomNumber];
-}
-  
 var playGame = function(e) {
   var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   var randomNumber = Math.floor(Math.random() * 5);
