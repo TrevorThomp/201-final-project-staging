@@ -3,12 +3,12 @@
 // Global Variables
 var userScore = 0;
 var computerScore = 0;
-var rock = document.getElementById();
-var paper = document.getElementById();
-var scissors = document.getElementById();
-var lizard = document.getElementById();
-var spock = document.getElementById();
-var bottomChat = document.getElementById();
+var rock = document.getElementById('rock');
+var paper = document.getElementById('paper');
+var scissors = document.getElementById('scissors');
+var lizard = document.getElementById('lizard');
+var spock = document.getElementById('spock');
+// var bottomChat = document.getElementById();
 
 
 //Preload High Score Array
@@ -75,3 +75,71 @@ var playGame = function(userChoice) {
     }
   }
 };
+
+var playerChoiceImgEl = document.getElementById('player-choice'); // empty image holder
+
+rock.addEventListener('click', handleClickOnImg);
+paper.addEventListener('click', handleClickOnImg);
+scissors.addEventListener('click', handleClickOnImg);
+lizard.addEventListener('click', handleClickOnImg);
+spock.addEventListener('click', handleClickOnImg);
+
+function handleClickOnImg(event) {
+  var choice = event.target.id;
+  if(choice === 'rock') {
+    playerChoiceImgEl.src = '../img/glowrock.svg';
+    // rockTimesPicked++ if we do distribution stretch goal
+  } else if(choice === 'paper') {
+    playerChoiceImgEl.src = '../img/glowpaper.svg';
+    // paperTimesPicked++ if we do distribution stretch goal
+  } else if(choice === 'scissors') {
+    playerChoiceImgEl.src = '../img/glowscissors.svg';
+    // scissorsTimesPicked++ if we do distribution stretch goal
+  } else if(choice === 'lizard') {
+    playerChoiceImgEl.src = '../img/glowlizard.svg';
+    // lizardTimesPicked++ if we do distribution stretch goal
+  } else if(choice === 'spock') {
+    playerChoiceImgEl.src = '../img/glowspock.svg';
+    // spockTimesPicked++ if we do distribution stretch goal
+  }
+}
+
+
+// var handleClickOnImg = function(event){
+//   var ul = document.getElementById('ul-voteresults');
+//   if(totalClicks > rounds - 2) {
+//     imgDivTag.removeEventListener('click', handleClickOnImg);
+//   }
+//   if(totalClicks < rounds) {
+//     var imageClicked = event.target;
+//     var id = imageClicked.id;
+//     if(id === 'img01' || id === 'img02' || id === 'img03'){
+//       if (id === 'img01'){
+//         img01OnThePage.clicks ++;
+//       }
+//       if (id === 'img02'){
+//         img02OnThePage.clicks ++;
+//       }
+//       if (id === 'img03'){
+//         img03OnThePage.clicks ++;
+//       }
+//       img01OnThePage.timesShown ++;
+//       img02OnThePage.timesShown ++;
+//       img03OnThePage.timesShown ++;
+//       pickNewImages();
+//     }
+//   }
+//   updateLocalStorage();
+//   totalClicks ++;
+//   if(totalClicks === rounds) {
+//     for (var i = 0; i < ProductImage.allImages.length; i++) {
+//       var liData = document.createElement('li');
+//       liData.setAttribute('class', 'li-results');
+//       liData.textContent = `${ProductImage.allImages[i].name}: Appearances ${ProductImage.allImages[i].timesShown} | Clicks ${ProductImage.allImages[i].clicks}`;
+//       ul.appendChild(liData);
+//     }
+//     alert('Thank you for participating!');
+//     makeChart();
+//     localStorage.clear(); // Credit: Travis Skyles
+//   }
+// };
