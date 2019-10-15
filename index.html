@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Placeholder for tab favicon -->
-  <link rel="icon" href="">
+  <link rel="icon" href="./img/favicon.png">
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <!-- Placeholder for Google font links -->
+  <link rel="stylesheet" href="./css/about-us.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ranchers&display=swap" rel="stylesheet">
   <title>Play</title>
 </head>
+
 <body>
 
   <div id="landing-container">
-    <h1>THE ARCADE</h1>
+    <h1>Cosmic Arcade</h1>
     <form id="enterarcade">
       <fieldset>
         <label>
           <span>ENTER YOUR USERNAME</span>
-          <input id="name" type="string" name='userName' required='true'/>
+          <input id="name" type="string" name='userName' required='true' />
         </label>
         </br>
         <input type="submit" value="ENTER ARCADE">
@@ -28,6 +29,19 @@
     </form>
   </div>
 
+  <header>
+    <div id="logo">
+      <h1>Cosmic Arcade</h1>
+    </div>
+    <nav id="nav">
+      <ul id="ul-nav">
+        <li><a href="./index.html">PLAY</a></li>
+        <li><a href="./pages/instructions.html">INSTRUCTIONS</a></li>
+        <li><a href="./pages/highscores.html">SCOREBOARD</a></li>
+        <li><a href="./pages/about-us.html">ABOUT</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
 
@@ -52,7 +66,7 @@
 
     <div id="showdown">
       <img id="player-choice" src="./img/blankchoice.png" alt="Player Choice">
-      <img id="computer-choice" src="./img/blankchoice.png" alt="Computer Choice"> 
+      <img id="computer-choice" src="./img/blankchoice.png" alt="Computer Choice">
     </div>
     <div id="div-weapons">
       <ul id="ul-weapons">
@@ -71,15 +85,16 @@
     </div>
 
   </main>
-  
 
-<div>
-  <h2 id="bottomChatHeader"></h2>
-  <p id="bottomChatText"></p>
-</div>
+
+  <div>
+    <h2 id="bottomChatHeader"></h2>
+    <p id="bottomChatText"></p>
+  </div>
 
 
 </body>
 
 <script src="./js/app.js"></script>
+
 </html>
