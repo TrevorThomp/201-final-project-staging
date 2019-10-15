@@ -48,17 +48,20 @@ var smackTalkArr = [
   'KEEP TALKING, SOMEDAY YOU\'LL SAY SOMETHING INTELLIGENT!'
 ];
 
-function computerChoice() {
+var computerChoice = function() {
+ 
+  
+  return choices[randomNumber];
+};
+
+var playGame = function(e) {
   var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   var randomNumber = Math.floor(Math.random() * 5);
-  return choices[randomNumber];
-}
-
-var playGame = function(userChoice) {
-  var computerChoice = computerChoice();
-  var bottomChatDiv = document.getElementById();
-  var bottomChatHeader = document.getElementById();
-  var bottomChatText = document.getElementById();
+  var computerChoice = choices[randomNumber];
+  
+  var userChoice = e.target.id;
+  var bottomChatHeader = document.getElementById('bottomChatHeader');
+  var bottomChatText = document.getElementById('bottomChatText');
   // Checks for draw
   if (userChoice === computerChoice) {
     bottomChatHeader.textContent = 'Draw';
@@ -175,10 +178,19 @@ var playerChoiceImgEl = document.getElementById('player-choice');
 
 // Adds listeners to each static image from index.html
 rock.addEventListener('click', handleClickOnImg);
+rock.addEventListener('click', playGame);
+
 paper.addEventListener('click', handleClickOnImg);
+paper.addEventListener('click', playGame);
+
 scissors.addEventListener('click', handleClickOnImg);
+scissors.addEventListener('click', playGame);
+
 lizard.addEventListener('click', handleClickOnImg);
+lizard.addEventListener('click', playGame);
+
 spock.addEventListener('click', handleClickOnImg);
+spock.addEventListener('click', playGame);
 
 // Says what will happen when you click on any particular image
 function handleClickOnImg(event) {
