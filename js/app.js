@@ -1,5 +1,16 @@
 'use strict';
 
+// Global Variables
+var userScore = 0;
+var computerScore = 0;
+var rock = document.getElementById();
+var paper = document.getElementById();
+var scissors = document.getElementById();
+var lizard = document.getElementById();
+var spock = document.getElementById();
+var bottomChat = document.getElementById();
+
+
 //Preload High Score Array
 var highScoreArray = [['Mark', 7],['David', 2],['Sally', 17]];
 
@@ -37,8 +48,30 @@ var smackTalkArr = [
   'KEEP TALKING, SOMEDAY YOU\'LL SAY SOMETHING INTELLIGENT!'
 ];
 
-var computerChoice = function() {
+function computerChoice() {
   var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   var randomNumber = Math.floor(Math.random() * 5);
   return choices[randomNumber];
+};
+
+var playGame = function(userChoice) {
+  var computerChoice = computerChoice();
+  // Checks for draw
+  if (userChoice === computerChoice) {
+    bottomChat.textContent = 'Draw';
+  }
+
+  // Checks for rock
+  // Want to add to Display actual reason over why you win or lose e.g. Spock Vaporizes Rock
+  if (userChoice === 'rock'){
+    if (computerChoice === 'scissors') {
+      bottomChat.textContent = 'User Wins';
+    } else if (computerChoice === 'lizard') {
+      bottomChat.textContent = 'User Wins';
+    } else if (computerChoice === 'paper') {
+      bottomChat.textContent = 'Computer Wins';
+    } else if (computerChoice === 'spock') {
+      bottomChat.textContent = 'Computer Wins';
+    }
+  }
 };
