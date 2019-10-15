@@ -36,3 +36,9 @@ var smackTalkArr = [
   'I\'VE BEEN CALLED WORSE THINGS BY BETTER PEOPLE',
   'KEEP TALKING, SOMEDAY YOU\'LL SAY SOMETHING INTELLIGENT!'
 ];
+
+var computerChoice = function() {
+  var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+  var randomNumber = Math.floor(Math.random() * 5);
+  return choices[randomNumber];
+};
