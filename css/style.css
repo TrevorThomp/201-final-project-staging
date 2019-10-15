@@ -1,8 +1,13 @@
 body {
   background-color: black;
+  color: white;
 }
 
 .choice {
   height: 100px;
   cursor: pointer;
+}
+
+#showdown img {
+  width: 20%;
 }
