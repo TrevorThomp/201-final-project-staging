@@ -4,16 +4,17 @@ body {
   background-image: url(../img/starbackground.svg);
   /* setting the width controls the star size */
   background-size: 400px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   margin: 10px;
 }
 
 h1 {
   font-family: 'Ranchers', cursive;
-  font-size: 3em;
-  color:  rgb(255, 230, 0);
+  font-size: 4em;
+  color: rgb(255, 204, 0);
   letter-spacing: 2px;
+  margin-top: 30px;
 }
 
 #div-showdown {
@@ -49,9 +50,35 @@ p {
 #imgtrevor, #imgmark, #imgholly {
   margin-top: 30px;
   border-radius: 10px;
-  border: 7px solid rgb(255, 230, 0);
+  border: 7px solid rgb(255, 204, 0);
 }
 
 .showdown {
   width: 200px;
 }
+
+#ul-nav {
+  margin-top: 20px;
+}
+
+#ul-nav li {
+  color: white;
+  padding: 15px;
+  font-weight: 600;
+}
+
+footer {
+  margin: 50px;
+}
+
+footer p:last-child {
+  font-size: .7em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
