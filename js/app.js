@@ -8,8 +8,6 @@ var paper = document.getElementById('paper');
 var scissors = document.getElementById('scissors');
 var lizard = document.getElementById('lizard');
 var spock = document.getElementById('spock');
-// var bottomChat = document.getElementById(); <<< I commented this out for the moment because the event handler for images choices doesn't work when this isn't commented out, at the moment - Holly
-
 
 //Preload High Score Array
 var highScoreArray = [['Mark', 7],['David', 2],['Sally', 17]];
@@ -47,12 +45,6 @@ var smackTalkArr = [
   'I\'VE BEEN CALLED WORSE THINGS BY BETTER PEOPLE',
   'KEEP TALKING, SOMEDAY YOU\'LL SAY SOMETHING INTELLIGENT!'
 ];
-
-var computerChoice = function() {
- 
-  
-  return choices[randomNumber];
-};
 
 var playGame = function(e) {
   var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
