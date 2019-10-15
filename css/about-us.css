@@ -9,6 +9,13 @@ body {
   margin: 10px;
 }
 
+h1 {
+  font-family: 'Ranchers', cursive;
+  font-size: 3em;
+  color:  rgb(255, 230, 0);
+  letter-spacing: 2px;
+}
+
 #div-showdown {
   text-align: center;
 }
