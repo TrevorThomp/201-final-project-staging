@@ -11,3 +11,15 @@ body {
 #showdown img {
   width: 20%;
 }
+
+#play-again-modal {
+  display: none;
+  border: 1px solid red;
+  margin: 0 auto;
+  width: 15%;
+}
+
+#play-again-modal button {
+  margin: 0 auto;
+  padding: 15px;
+}
