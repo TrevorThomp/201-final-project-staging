@@ -1,0 +1,8 @@
+body {
+  background-color: black;
+}
+
+.choice {
+  height: 100px;
+  cursor: pointer;
+}

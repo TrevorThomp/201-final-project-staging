@@ -3,12 +3,12 @@
 // Global Variables
 var userScore = 0;
 var computerScore = 0;
-var rock = document.getElementById();
-var paper = document.getElementById();
-var scissors = document.getElementById();
-var lizard = document.getElementById();
-var spock = document.getElementById();
-var bottomChat = document.getElementById();
+var rock = document.getElementById('rock');
+var paper = document.getElementById('paper');
+var scissors = document.getElementById('scissors');
+var lizard = document.getElementById('lizard');
+var spock = document.getElementById('spock');
+// var bottomChat = document.getElementById(); <<< I commented this out for the moment because the event handler for images choices doesn't work when this isn't commented out, at the moment - Holly
 
 
 //Preload High Score Array
@@ -169,3 +169,34 @@ var playGame = function(userChoice) {
     }
   }
 };
+
+// Gets initally empty image that will get replaced by the user's choice
+var playerChoiceImgEl = document.getElementById('player-choice');
+
+// Adds listeners to each static image from index.html
+rock.addEventListener('click', handleClickOnImg);
+paper.addEventListener('click', handleClickOnImg);
+scissors.addEventListener('click', handleClickOnImg);
+lizard.addEventListener('click', handleClickOnImg);
+spock.addEventListener('click', handleClickOnImg);
+
+// Says what will happen when you click on any particular image
+function handleClickOnImg(event) {
+  var choice = event.target.id;
+  if(choice === 'rock') {
+    playerChoiceImgEl.src = '../img/glowrock.svg';
+    playerChoiceImgEl.id = 'rock-choice';
+  } else if(choice === 'paper') {
+    playerChoiceImgEl.src = '../img/glowpaper.svg';
+    playerChoiceImgEl.id = 'paper-choice';
+  } else if(choice === 'scissors') {
+    playerChoiceImgEl.src = '../img/glowscissors.svg';
+    playerChoiceImgEl.id = 'scissors-choice';
+  } else if(choice === 'lizard') {
+    playerChoiceImgEl.src = '../img/glowlizard.svg';
+    playerChoiceImgEl.id = 'lizard-choice';
+  } else if(choice === 'spock') {
+    playerChoiceImgEl.src = '../img/glowspock.svg';
+    playerChoiceImgEl.id = 'spock-choice';
+  }
+}
