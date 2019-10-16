@@ -8,6 +8,12 @@ body {
   color: #00AAFF;
 }
 
+#player-name {
+  font-family: 'Ranchers', cursive;
+  font-size: 1.5em;
+  text-align: center;
+}
+
 h1 {
   font-family: 'Ranchers', cursive;
   font-size: 4em;
@@ -35,7 +41,7 @@ h2 {
   display: inline;
 }
 
-a {
+#ul-nav li>a {
   text-decoration: none;
   color: #00AAFF;
 }
@@ -244,12 +250,13 @@ a {
 }
 
 footer {
+  margin: 30px 0px;
   color: #3150BC;
-  font-size: .8em;
 }
 
-#attribution {
-  margin-top: 10px;
+footer a {
+  color: #3150BC;
+  text-decoration: none;
 }
 
 /* INSTRUCTIONS PAGE STYLING   */
