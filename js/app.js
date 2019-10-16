@@ -99,7 +99,9 @@ function submitForm(e){
   updateLS();
   // Takes user's name and puts it on the left side of showdown area
   var playerName = document.getElementById('playerName');
-  playerName.textContent = name;
+  if(name !== ''){
+    playerName.textContent = name;
+  }
 }
 
 var form = document.getElementById('enterarcade');
