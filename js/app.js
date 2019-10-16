@@ -122,7 +122,14 @@ var updateScore = function() {
 
 var playAgainModalDisplay = function() {
   var modal = document.getElementById('play-again-modal');
+  var modalText = document.getElementById('modalText');
   modal.style.display = 'block';
+
+  if(playerScore === 5) {
+    modalText.textContent = 'Congradulations! You have won! Press Play Again if you would like to test your odds';
+  } else if (compScore === 5) {
+    modalText.textContent = 'Bummer! You don\'t seem to have what it takes! You can try again if you think you\'re better than that';
+  }
 };
 
 var playAgain = function() {
@@ -147,10 +154,8 @@ var winRound = function () {
   if (playerScore === 5) {
     user.personalScore += 10;
     updateLS();
-    alert('You Won!');
     playAgainModalDisplay();
   } else if (compScore === 5) {
-    alert('You Lose!');
     playAgainModalDisplay();
   }
 };
