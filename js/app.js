@@ -72,7 +72,6 @@ function submitForm(e){
   updateLS();
 }
 
-// Holly turned the following off temporarily because the game wasn't working with it on
 var form = document.getElementById('enterarcade');
 form.addEventListener('submit', submitForm);
 
