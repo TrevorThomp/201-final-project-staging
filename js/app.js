@@ -10,9 +10,10 @@ var lizard = document.getElementById('lizard');
 var spock = document.getElementById('spock');
 var bottomChatHeader = document.getElementById('bottomChatHeader');
 var bottomChatText = document.getElementById('bottomChatText');
-var user = null;
-var playerName = '';
+var userName = document.getElementById('player-name');
 var imageChoices = document.getElementById('ul-weapons');
+var user = null;
+
 
 //Preload Smack Talk Array
 // https://www.rappad.co/insult-generator
@@ -102,9 +103,9 @@ function submitForm(e){
   user = new CreatePlayer(name);
   updateLS();
   // Takes user's name and puts it on the left side of showdown area
-  var playerName = document.getElementById('playerName');
+  var userName = document.getElementById('playerName');
   if(name !== ''){
-    playerName.textContent = name;
+    userName.textContent = name;
   }
 }
 var form = document.getElementById('enterarcade');
@@ -132,9 +133,9 @@ var playAgainModalDisplay = function() {
   imageChoices.style.display = 'none';
   modal.style.display = 'block';
   if(playerScore === 5) {
-    modalText.textContent = 'Congratulations! You have won! Press Play Again if you would like to test your odds';
+    modalText.textContent = `Congratulations ${userName.value}! You have won! Press Play Again if you would like to test your odds`;
   } else if (compScore === 5) {
-    modalText.textContent = 'Bummer! You don\'t seem to have what it takes! You can try again if you think you\'re better than that';
+    modalText.textContent = `Bummer ${userName.value}! You don't seem to have what it takes! You can try again if you think you're better than that`;
   }
 };
 
