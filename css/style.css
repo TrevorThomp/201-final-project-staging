@@ -247,6 +247,7 @@ ol {
   background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
   background-size: 400%;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   animation: anim 8s linear infinite;
 }
 
