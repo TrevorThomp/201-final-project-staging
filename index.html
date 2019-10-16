@@ -7,15 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="./img/favicon.png">
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/about-us.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ranchers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
   <title>Play</title>
 </head>
 
 <body>
 
-  <div id="landing-container">
+  <!-- <div id="landing-container">
     <h1>Cosmic Arcade</h1>
     <form id="enterarcade">
       <fieldset>
@@ -27,7 +28,7 @@
         <input type="submit" value="ENTER ARCADE">
       </fieldset>
     </form>
-  </div>
+  </div> -->
 
   <header>
     <div id="logo">
@@ -46,16 +47,17 @@
   <main>
 
     <div id="playerName-container">
-      <p id="playerName"></p>
-    </div>
-
-    <div id="scoreboard">
-      <span id="userScore">0</span>
-      <span id="computerScore">0</span>
+      <p id="playerName">Penny</p>
     </div>
 
     <div id="compName-container">
       <p id="computerName">Sheldon</p>
+    </div>
+
+    <div id="scoreboard">
+      <span class="scores">0</span>
+      <span class="scores">:</span>
+      <span class="scores">0</span>
     </div>
 
     <div id="play-again-modal">
@@ -63,35 +65,41 @@
       <button>Play Again</button>
     </div>
 
-
-    <div id="showdown">
-      <img id="player-choice" src="./img/blankchoice.png" alt="Player Choice">
-      <img id="computer-choice" src="./img/blankchoice.png" alt="Computer Choice">
-    </div>
+    <ul id="ul-choices">
+      <li><img class="img-showdown" id="player-choice" src="./img/blankchoice.png" alt="Player Choice"></li>
+      <li><img id="divider" src="./img/divider.svg" width=5px alt=""></li>
+      <li><img class="img-showdown" id="computer-choice" src="./img/blankchoice.png" alt="Computer Choice"></li>
+    </ul>
+    
     <div id="div-weapons">
       <ul id="ul-weapons">
         <li><img id="rock" class="choice" src="./img/glowrock.svg" alt=""></li>
         <li><img id="paper" class="choice" src="./img/glowpaper.svg" alt=""></li>
         <li><img id="scissors" class="choice" src="./img/glowscissors.svg" alt=""></li>
         <li><img id="lizard" class="choice" src="./img/glowlizard.svg" alt=""></li>
-        <li><img id="spock" class="choice" src="./img/glowspock.svg" alt=""></li>
+        <li><img id="spock" class="choice" src="./img/glowspock2.svg" alt=""></li>
       </ul>
     </div>
 
     <div id="smackTalk">
       <div id="slide-in-content">
-          <p id="array-text"></p>
+        <p id="array-text"></p>
       </div>
     </div>
 
   </main>
 
-
-  <div>
+  <div id="round-message">
     <h2 id="bottomChatHeader"></h2>
     <p id="bottomChatText"></p>
   </div>
 
+  <footer>
+      <p>&copy 2019 Repo Wranglers</p>
+      <p id="attribution">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+          href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+      </p>
+    </footer>
 
 </body>
 

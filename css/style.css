@@ -1,15 +1,74 @@
 body {
-  background-color: black;
-  color: white;
+  background-image: url(../img/starbackground.svg);
+  /* setting the following controls the star size */
+  background-size: 400px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin: 10px;
+  color: #00AAFF;
 }
 
-.choice {
-  height: 100px;
-  cursor: pointer;
+h1 {
+  font-family: 'Ranchers', cursive;
+  font-size: 4em;
+  color: #FFCC00;
+  letter-spacing: 2px;
+  margin-top: 30px;
 }
 
-#showdown img {
-  width: 20%;
+h2 {
+  font-family: 'Ranchers', cursive;
+  font-size: 2em;
+  color: #FFCC00;
+  letter-spacing: 2px;
+  margin: 20px 0px;
+}
+
+#ul-nav {
+  margin-top: 20px;
+  color: #00AAFF;
+}
+
+#ul-nav li {
+  padding: 15px;
+  font-weight: 600;
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  color: #00AAFF;
+}
+
+#playerName-container {
+  float: left;
+  margin: 40px 0px 0px 45px;
+  font-family: 'Ranchers', cursive;
+  font-size: 1.5em;
+  color: #FFCC00;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+#compName-container {
+  float: right;
+  margin: 40px 30px 0px 0px;
+  font-family: 'Ranchers', cursive;
+  font-size: 1.5em;
+  color: #FFCC00;
+  letter-spacing: 2px;
+}
+
+#scoreboard {
+  margin: 20px auto;
+  width: 45%;
+  border: 4px solid #FFCC00;
+  border-radius: 10px;
+}
+
+#scoreboard span {
+  font-size: 5em;
+  font-family: 'VT323', monospace;
 }
 
 #play-again-modal {
@@ -23,3 +82,91 @@ body {
   margin: 0 auto;
   padding: 15px;
 }
+
+#ul-choices li {
+  display: inline;
+}
+
+.img-showdown {
+  width: 40%;
+  height: 200px;
+}
+
+#divider {
+  margin: 0px 20px;
+  height: 200px;
+}
+
+#div-weapons {
+  margin-top: 5%;
+  text-align: center;
+}
+
+#ul-weapons {
+  list-style-type: none;
+}
+
+#ul-weapons li {
+  display: inline;
+}
+
+.choice {
+  height: 100px;
+  cursor: pointer;
+}
+
+#smackTalk {
+  margin-top: 50px;
+}
+
+#round-message h2 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+#round-message p {
+  font-size: 1.5em;
+}
+
+footer {
+  color: #3150BC;
+  font-size: .8em;
+}
+
+#attribution {
+  margin-top: 10px;
+}
+
+/* INSTRUCTIONS PAGE STYLING   */
+
+#instructions {
+  margin: 0px auto;
+  width:  75%;
+}
+
+#ol-instructions li {
+  list-style-type: decimal;
+  text-align: left;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+#howtopic {
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 7px solid #FFCC00;
+}
+
+#whatwins {
+  margin-bottom: 20px;
+}
+
+#whatwins li {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+  padding: 5px;
+  color: #00AAFF;
+}
+
+
+/* SCOREBOARD PAGE STYLING*/

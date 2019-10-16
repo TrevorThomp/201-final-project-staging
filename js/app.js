@@ -69,8 +69,9 @@ function submitForm(e){
   var user = new CreatePlayer(name);
 }
 
-var form = document.getElementById('enterarcade');
-form.addEventListener('submit', submitForm);
+// Holly turned the following off temporarily because the game wasn't working with it on
+// var form = document.getElementById('enterarcade');
+// form.addEventListener('submit', submitForm);
 
 var updateScore = function() {
   var userScore = document.getElementById('userScore');
@@ -163,7 +164,7 @@ var playGame = function(e) {
       playerScore++;
       updateScore();
     } else if (computerChoice === 'spock') {
-      bottomChatHeader.textContent = 'Paper disapproves Spock';
+      bottomChatHeader.textContent = 'Paper disproves Spock';
       bottomChatText.textContent = 'User Wins';
       playerScore++;
       updateScore();
@@ -222,7 +223,7 @@ var playGame = function(e) {
       playerScore++;
       updateScore();
     } else if (computerChoice === 'paper') {
-      bottomChatHeader.textContent = 'Paper disapproves Spock';
+      bottomChatHeader.textContent = 'Paper disproves Spock';
       bottomChatText.textContent = 'Computer Wins';
       compScore++;
       updateScore();
