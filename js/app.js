@@ -64,16 +64,6 @@ var updateLS = function(){
   localStorage.setItem('allPlayersLS', allPlayersData);
 };
 
-//Function to retrieve data from local storage
-var retrieveLS = function(){
-  var retrievedData = localStorage.getItem('allPlayersLS');
-  var userData = JSON.parse(retrievedData);
-
-  if(userData !== null) {
-    CreatePlayer.allPlayers = userData;
-  }
-};
-
 function submitForm(e){
   e.preventDefault();
   var name = e.target.name.value;
