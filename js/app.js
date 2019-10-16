@@ -12,6 +12,8 @@ var bottomChatHeader = document.getElementById('bottomChatHeader');
 var bottomChatText = document.getElementById('bottomChatText');
 var userName = document.getElementById('player-name');
 var imageChoices = document.getElementById('ul-weapons');
+var playerChoiceImgEl = document.getElementById('player-choice');
+var computerChoiceImgEl = document.getElementById('computer-choice');
 var user = null;
 
 
@@ -150,6 +152,8 @@ var playAgain = function() {
   bottomChatText.textContent = '';
   modal.style.display = 'none';
   imageChoices.style.display = 'block';
+  playerChoiceImgEl.src = './img/blankchoice.png';
+  computerChoiceImgEl.src = './img/blankchoice.png';
   playerScore = 0;
   compScore = 0;
   clearSmackTalk();
@@ -325,9 +329,6 @@ var playGame = function(e) {
       smackTalkDisplay();
     }
   }
-
-  // Gets initally empty image that will get replaced by the computer's choice
-  var computerChoiceImgEl = document.getElementById('computer-choice');
   // Dictates what image will display based on the computer's choice and assigns the img tag a new ID
   if(computerChoice === 'rock') {
     computerChoiceImgEl.src = '../img/glowrock.png';
@@ -342,9 +343,6 @@ var playGame = function(e) {
   }
   winRound();
 };
-
-// Gets initally empty image that will get replaced by the user's choice
-var playerChoiceImgEl = document.getElementById('player-choice');
 
 // Adds listeners to each static image from index.html
 rock.addEventListener('click', handleClickOnImg);
