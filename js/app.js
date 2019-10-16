@@ -8,6 +8,8 @@ var paper = document.getElementById('paper');
 var scissors = document.getElementById('scissors');
 var lizard = document.getElementById('lizard');
 var spock = document.getElementById('spock');
+var bottomChatHeader = document.getElementById('bottomChatHeader');
+var bottomChatText = document.getElementById('bottomChatText');
 var user = null;
 
 //Preload Smack Talk Array
@@ -70,6 +72,7 @@ var CreatePlayer = function(userName){
   this.userName = userName;
   this.personalScore = 0;
   CreatePlayer.allPlayers.push(this);
+  updateLS();
 };
 CreatePlayer.allPlayers = [];
 
@@ -77,6 +80,15 @@ CreatePlayer.allPlayers = [];
 var updateLS = function(){
   var allPlayersData = JSON.stringify(CreatePlayer.allPlayers);
   localStorage.setItem('allUsers', allPlayersData);
+};
+
+var retrieveLS = function(){
+  var retrievedData = localStorage.getItem('allUsers');
+  var playerData = JSON.parse(retrievedData);
+
+  if(playerData !== null) {
+    CreatePlayer.allPlayers = playerData;
+  }
 };
 
 function submitForm(e){
@@ -106,13 +118,38 @@ var updateScore = function() {
   computerScore.textContent = compScore;
 };
 
+var playAgainModalDisplay = function() {
+  var modal = document.getElementById('play-again-modal');
+  modal.style.display = 'block';
+};
+
+var playAgain = function() {
+  var modal = document.getElementById('play-again-modal');
+  var userScore = document.getElementById('userScore');
+  var computerScore = document.getElementById('computerScore');
+  userScore.textContent = 0;
+  computerScore.textContent = 0;
+  bottomChatHeader.textContent = '';
+  bottomChatText.textContent = '';
+  playerScore = 0;
+  compScore = 0;
+  modal.style.display = 'none';
+  clearSmackTalk();
+};
+
+var playAgainButton = document.getElementById('play-again-button');
+playAgainButton.addEventListener('click', playAgain);
+
+
 var winRound = function () {
   if (playerScore === 5) {
     user.personalScore += 10;
     updateLS();
     alert('You Won!');
+    playAgainModalDisplay();
   } else if (compScore === 5) {
     alert('You Lose!');
+    playAgainModalDisplay();
   }
 };
 
@@ -121,8 +158,6 @@ var playGame = function(e) {
   var randomNumber = Math.floor(Math.random() * 5);
   var computerChoice = choices[randomNumber];
   var userChoice = e.target.id;
-  var bottomChatHeader = document.getElementById('bottomChatHeader');
-  var bottomChatText = document.getElementById('bottomChatText');
   // Checks for draw
   if (userChoice === computerChoice) {
     bottomChatHeader.textContent = 'Draw';
