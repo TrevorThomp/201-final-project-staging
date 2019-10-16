@@ -3,7 +3,6 @@
 // Global Variables
 var playerScore = 0;
 var compScore = 0;
-var numberOfRounds = 0;
 var rock = document.getElementById('rock');
 var paper = document.getElementById('paper');
 var scissors = document.getElementById('scissors');
@@ -49,7 +48,7 @@ var smackTalkArr = [
 
 var smackTalkDisplay = function() {
   var textDisplay = document.getElementById('array-text');
-  var randomNumber = Math.floor(Math.random() * 5);
+  var randomNumber = Math.floor(Math.random() * smackTalkArr.length);
   textDisplay.textContent = smackTalkArr[randomNumber];
 };
 
@@ -69,6 +68,12 @@ function submitForm(e){
 
 var form = document.getElementById('enterarcade');
 form.addEventListener('submit', submitForm);
+
+var button = document.getElementById('enter-button');
+var overlay = document.getElementById('overlay');
+button.addEventListener('click', function() {
+  overlay.style.display = 'none';
+});
 
 var updateScore = function() {
   var userScore = document.getElementById('userScore');

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="./img/favicon.png">
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/about-us.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ranchers&display=swap" rel="stylesheet">
   <title>Play</title>
@@ -15,16 +15,13 @@
 
 <body>
 
-  <div id="landing-container">
+  <div id="overlay">
     <h1>Cosmic Arcade</h1>
     <form id="enterarcade">
-      <fieldset>
-        <label>
-          <span>ENTER YOUR USERNAME</span>
-          <input id="name" type="string" name='userName' required='true' />
-        </label>
-        </br>
-        <input type="submit" value="ENTER ARCADE">
+      <fieldset id="input-container">
+        <label>Enter your username:</label>
+        <input id="name" type="string" name='userName' required>
+        <button type="submit" id="enter-button">Enter Arcade</button>
       </fieldset>
     </form>
   </div>
