@@ -11,6 +11,7 @@ var spock = document.getElementById('spock');
 var bottomChatHeader = document.getElementById('bottomChatHeader');
 var bottomChatText = document.getElementById('bottomChatText');
 var user = null;
+var playerName = '';
 var imageChoices = document.getElementById('ul-weapons');
 
 //Preload Smack Talk Array
