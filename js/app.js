@@ -11,10 +11,10 @@ var spock = document.getElementById('spock');
 var bottomChatHeader = document.getElementById('bottomChatHeader');
 var bottomChatText = document.getElementById('bottomChatText');
 var user = null;
+var imageChoices = document.getElementById('ul-weapons');
 
 //Preload Smack Talk Array
 // https://www.rappad.co/insult-generator
-
 var smackTalkArr = [
   'YOU\'RE AS USELESS AS A PHONE WITH 1% REMAINING BATTERY LIFE.',
   'YOU COULDN\'T POUR WATER OUT OF A BOOT IF THE INSTRUCTIONS WERE ON THE HEEL.',
@@ -56,12 +56,14 @@ var smackTalkArr = [
   'You\'re not lazy, just that the people around you are way too active.'
 ];
 
+// Randomly generate insults from smackTalk array
 var smackTalkDisplay = function() {
   var textDisplay = document.getElementById('array-text');
   var randomNumber = Math.floor(Math.random() * smackTalkArr.length);
   textDisplay.textContent = smackTalkArr[randomNumber];
 };
 
+// Clears smack talk if user wins
 var clearSmackTalk = function() {
   var textDisplay = document.getElementById('array-text');
   textDisplay.textContent = '';
@@ -82,15 +84,16 @@ var updateLS = function(){
   localStorage.setItem('allUsers', allPlayersData);
 };
 
+// Function to retrieve data in local storage
 var retrieveLS = function(){
   var retrievedData = localStorage.getItem('allUsers');
   var playerData = JSON.parse(retrievedData);
-
   if(playerData !== null) {
     CreatePlayer.allPlayers = playerData;
   }
 };
 
+// Instantiates new player upon form input and stores in local storage
 function submitForm(e){
   e.preventDefault();
   var input = document.getElementById('player-name');
@@ -103,16 +106,17 @@ function submitForm(e){
     playerName.textContent = name;
   }
 }
-
 var form = document.getElementById('enterarcade');
 form.addEventListener('submit', submitForm);
 
+// Toggles display when user enters the arcade
 var button = document.getElementById('enter-button');
 var overlay = document.getElementById('overlay');
 button.addEventListener('click', function() {
   overlay.style.display = 'none';
 });
 
+// Renders updated playScore & computerScore to page
 var updateScore = function() {
   var userScore = document.getElementById('userScore');
   var computerScore = document.getElementById('computerScore');
@@ -120,18 +124,20 @@ var updateScore = function() {
   computerScore.textContent = compScore;
 };
 
+// Function to allow user to play again if they choose
 var playAgainModalDisplay = function() {
   var modal = document.getElementById('play-again-modal');
   var modalText = document.getElementById('modalText');
+  imageChoices.style.display = 'none';
   modal.style.display = 'block';
-
   if(playerScore === 5) {
-    modalText.textContent = 'Congradulations! You have won! Press Play Again if you would like to test your odds';
+    modalText.textContent = 'Congratulations! You have won! Press Play Again if you would like to test your odds';
   } else if (compScore === 5) {
     modalText.textContent = 'Bummer! You don\'t seem to have what it takes! You can try again if you think you\'re better than that';
   }
 };
 
+// If user hits "play again" reset major game page
 var playAgain = function() {
   var modal = document.getElementById('play-again-modal');
   var userScore = document.getElementById('userScore');
@@ -140,16 +146,17 @@ var playAgain = function() {
   computerScore.textContent = 0;
   bottomChatHeader.textContent = '';
   bottomChatText.textContent = '';
+  modal.style.display = 'none';
+  imageChoices.style.display = 'block';
   playerScore = 0;
   compScore = 0;
-  modal.style.display = 'none';
   clearSmackTalk();
 };
 
 var playAgainButton = document.getElementById('play-again-button');
 playAgainButton.addEventListener('click', playAgain);
 
-
+// Function that increments user personalScore if they win and displays modal
 var winRound = function () {
   if (playerScore === 5) {
     user.personalScore += 10;
@@ -160,6 +167,7 @@ var winRound = function () {
   }
 };
 
+// Function to hold game conditionals
 var playGame = function(e) {
   var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   var randomNumber = Math.floor(Math.random() * 5);
@@ -171,7 +179,6 @@ var playGame = function(e) {
     bottomChatText.textContent = `Your ${userChoice} has tied my ${computerChoice}`;
     clearSmackTalk();
   }
-
   // Checks for rock
   if (userChoice === 'rock'){
     if (computerChoice === 'scissors') {
