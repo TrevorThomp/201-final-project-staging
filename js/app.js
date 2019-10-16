@@ -55,17 +55,41 @@ var smackTalkDisplay = function() {
 };
 
 //Create Constructor Function
-var allPlayers = [];
-
 var CreatePlayer = function(userName){
   this.userName = userName;
-  allPlayers.push(this);
+  CreatePlayer.allPlayers.push(this);
 };
+CreatePlayer.allPlayers = [];
+
+//Function to store data in local storage
+var updateLS = function(){
+  var allPlayersData = JSON.stringify(CreatePlayer.allPlayers);
+  localStorage.setItem('allPlayersLS', allPlayersData);
+
+  var highScoreData = JSON.stringify(highScoreArray);
+  localStorage.setItem('highScoresLS', highScoreData);
+};
+
+//Function to retrieve data from local storage
+var retreiveLS = function(){
+  if(allPlayersLS !== 0) {
+    var retrievedData = localStorage.getItem('allPlayersLS');
+    allPlayers = JSON.parse(retrievedData);
+  }
+  if(highScoresLS !== 0){
+    var retrieveHighScores = localStorage.getItem('highScoresLS');
+    highScoreArray = JSON.parse(retrieveHighScores);
+  }
+};
+
+updateLS();
+retreiveLS();
 
 function submitForm(e){
   e.preventDefault();
   var name = e.target.name.value;
   var user = new CreatePlayer(name);
+  updateLS();
 }
 
 var form = document.getElementById('enterarcade');
@@ -298,29 +322,5 @@ function handleClickOnImg(event) {
   }
 }
 
-//Function to store data in local storage
-var updateLS = function(){
-  var allPlayersData = JSON.stringify(allPlayers);
-  localStorage.setItem('allPlayersLS', allPlayersData);
 
-  var highScoreData = JSON.stringify(highScoreArray);
-  localStorage.setItem('highScoresLS', highScoreData);
-};
-
-
-
-//Function to retrieve data from local storage
-var retreiveLS = function(){
-  if(allPlayersLS !== 0) {
-    var retrievedData = localStorage.getItem('allPlayersLS');
-    allPlayers = JSON.parse(retrievedData);
-  }
-  if(highScoresLS !== 0){
-    var retrieveHighScores = localStorage.getItem(highScoresLS);
-    highScoreArray = JSON.parse(retrieveHighScores);
-  }
-};
-
-updateLS();
-retreiveLS();
 
