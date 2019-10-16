@@ -321,15 +321,15 @@ var playGame = function(e) {
   var computerChoiceImgEl = document.getElementById('computer-choice');
   // Dictates what image will display based on the computer's choice and assigns the img tag a new ID
   if(computerChoice === 'rock') {
-    computerChoiceImgEl.src = '../img/glowrock.svg';
+    computerChoiceImgEl.src = '../img/glowrock.png';
   } else if(computerChoice === 'paper') {
-    computerChoiceImgEl.src = '../img/glowpaper.svg';
+    computerChoiceImgEl.src = '../img/glowpaper.png';
   } else if(computerChoice === 'scissors') {
-    computerChoiceImgEl.src = '../img/glowscissors.svg';
+    computerChoiceImgEl.src = '../img/glowscissors.png';
   } else if(computerChoice === 'lizard') {
-    computerChoiceImgEl.src = '../img/glowlizard.svg';
+    computerChoiceImgEl.src = '../img/glowlizard.png';
   } else if(computerChoice === 'spock') {
-    computerChoiceImgEl.src = '../img/glowspock.svg';
+    computerChoiceImgEl.src = '../img/glowspock.png';
   }
   winRound();
 };
@@ -357,19 +357,19 @@ spock.addEventListener('click', playGame);
 function handleClickOnImg(event) {
   var choice = event.target.id;
   if(choice === 'rock') {
-    playerChoiceImgEl.src = '../img/glowrock.svg';
+    playerChoiceImgEl.src = '../img/glowrock.png';
     playerChoiceImgEl.id = 'rock-choice';
   } else if(choice === 'paper') {
-    playerChoiceImgEl.src = '../img/glowpaper.svg';
+    playerChoiceImgEl.src = '../img/glowpaper.png';
     playerChoiceImgEl.id = 'paper-choice';
   } else if(choice === 'scissors') {
-    playerChoiceImgEl.src = '../img/glowscissors.svg';
+    playerChoiceImgEl.src = '../img/glowscissors.png';
     playerChoiceImgEl.id = 'scissors-choice';
   } else if(choice === 'lizard') {
-    playerChoiceImgEl.src = '../img/glowlizard.svg';
+    playerChoiceImgEl.src = '../img/glowlizard.png';
     playerChoiceImgEl.id = 'lizard-choice';
   } else if(choice === 'spock') {
-    playerChoiceImgEl.src = '../img/glowspock.svg';
+    playerChoiceImgEl.src = '../img/glowspock.png';
     playerChoiceImgEl.id = 'spock-choice';
   }
 }
