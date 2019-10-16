@@ -1,5 +1,3 @@
-/* Just some quick CSS to demo the star background--it's fine that we change this later */
-
 body {
   background-image: url(../img/starbackground.svg);
   /* setting the width controls the star size */
@@ -7,7 +5,8 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   margin: 10px;
-  color: white;
+
+  color: #00AAFF;
 }
 
 h1 {
@@ -41,7 +40,6 @@ li {
 }
 
 p {
-  color: white;
   line-height: 1.2em;
   margin-bottom: 10px;
 }
@@ -51,33 +49,3 @@ p {
   border-radius: 10px;
   border: 7px solid rgb(255, 204, 0);
 }
-
-.showdown {
-  width: 200px;
-}
-
-#ul-nav {
-  margin-top: 20px;
-}
-
-#ul-nav li {
-  color: white;
-  padding: 15px;
-  font-weight: 600;
-}
-
-footer {
-  margin: 50px;
-}
-
-footer p:last-child {
-  font-size: .7em;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-
-
