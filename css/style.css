@@ -58,7 +58,7 @@ ol {
 
 #playerName-container {
   float: left;
-  margin: 40px 0px 0px 45px;
+  margin: 40px 0px 0px 30px;
   font-family: 'Ranchers', cursive;
   font-size: 1.5em;
   color: #FFCC00;
@@ -68,7 +68,7 @@ ol {
 
 #compName-container {
   float: right;
-  margin: 40px 30px 0px 0px;
+  margin: 40px 5px 0px 0px;
   font-family: 'Ranchers', cursive;
   font-size: 1.5em;
   color: #FFCC00;
@@ -418,7 +418,7 @@ footer a {
 
 /* INSTRUCTIONS PAGE STYLING   */
 #instructions {
-  margin: 0px auto;
+  margin: 0 auto; 
   width:  75%;
 }
 
@@ -452,6 +452,14 @@ footer a {
 
 
 @media (min-width: 768px) {
+  #playerName-container {
+    margin: 40px 0px 0px 70px;
+  }
+  
+  #compName-container {
+    margin: 40px 70px 0px 0px;
+  }
+
   #play-again-modal {
     width: 25%;
   }
@@ -462,6 +470,14 @@ footer a {
 }
 
 @media (min-width: 1024px) {
+  #playerName-container {
+    margin: 40px 0px 0px 200px;
+  }
+  
+  #compName-container {
+    margin: 40px 200px 0px 0px;
+  }
+
   #play-again-modal {
     width: 25%;
   }
