@@ -66,7 +66,8 @@ var updateLS = function(){
 
 function submitForm(e){
   e.preventDefault();
-  var name = e.target.name.value;
+  var input = document.getElementById('player-name');
+  var name = input.value;
   user = new CreatePlayer(name);
   updateLS();
 }
