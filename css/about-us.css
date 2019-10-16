@@ -5,29 +5,14 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   margin: 10px;
-
   color: #00AAFF;
 }
 
 h1 {
   font-family: 'Ranchers', cursive;
   font-size: 4em;
-  color: rgb(255, 204, 0);
   letter-spacing: 2px;
   margin-top: 30px;
-}
-
-#div-showdown {
-  text-align: center;
-}
-
-#div-weapons {
-  margin-top: 100px;
-  text-align: center;
-}
-
-#ul-weapons {
-  list-style-type: none;
 }
 
 li {
@@ -40,12 +25,26 @@ li {
 }
 
 p {
+  font-size: 1.2em;
   line-height: 1.2em;
   margin-bottom: 10px;
+}
+
+.career {
+  margin: 0px auto;
+  width: 80%
+}
+
+.hobbies {
+  margin-top: 20px;
 }
 
 #imgtrevor, #imgmark, #imgholly {
   margin-top: 30px;
   border-radius: 10px;
   border: 7px solid rgb(255, 204, 0);
+}
+
+ul img {
+  padding: 10px;
 }
