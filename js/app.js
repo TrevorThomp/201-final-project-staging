@@ -53,7 +53,7 @@ var smackTalkDisplay = function() {
 var clearSmackTalk = function() {
   var textDisplay = document.getElementById('array-text');
   textDisplay.textContent = '';
-}
+};
 
 //Create Constructor Function
 var CreatePlayer = function(userName){
@@ -66,7 +66,7 @@ CreatePlayer.allPlayers = [];
 //Function to store data in local storage
 var updateLS = function(){
   var allPlayersData = JSON.stringify(CreatePlayer.allPlayers);
-  localStorage.setItem('allPlayersLS', allPlayersData);
+  localStorage.setItem('allUsers', allPlayersData);
 };
 
 function submitForm(e){
@@ -114,6 +114,7 @@ var playGame = function(e) {
   if (userChoice === computerChoice) {
     bottomChatHeader.textContent = 'Draw';
     bottomChatText.textContent = `Your ${userChoice} has tied my ${computerChoice}`;
+    clearSmackTalk();
   }
 
   // Checks for rock
@@ -317,3 +318,5 @@ function handleClickOnImg(event) {
     playerChoiceImgEl.id = 'spock-choice';
   }
 }
+
+retrieveLS();
