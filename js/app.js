@@ -74,7 +74,7 @@ var updateLS = function(){
 var retreiveLS = function(){
   if(allPlayersLS !== 0) {
     var retrievedData = localStorage.getItem('allPlayersLS');
-    allPlayers = JSON.parse(retrievedData);
+    CreatePlayer.allPlayers = JSON.parse(retrievedData);
   }
   if(highScoresLS !== 0){
     var retrieveHighScores = localStorage.getItem('highScoresLS');
