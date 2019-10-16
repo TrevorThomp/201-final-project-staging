@@ -230,7 +230,8 @@ ol {
   }
 }
 
-.choice {
+.choice,
+#h1-logo {
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
