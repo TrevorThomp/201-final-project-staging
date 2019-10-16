@@ -80,12 +80,13 @@ a {
   right: 0;
   bottom: 0;
   background-image: url(../img/overlay-background.jpg);
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  background-size: 600px;
+  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
 }
 
 #input-container {
   display: block;
-  margin-top: 450px;
+  margin-top: 350px;
   text-align: center;
 }
 
