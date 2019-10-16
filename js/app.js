@@ -9,9 +9,11 @@ var paper = document.getElementById('paper');
 var scissors = document.getElementById('scissors');
 var lizard = document.getElementById('lizard');
 var spock = document.getElementById('spock');
+var allPlayersLS;
+var highScoresLS;
 
 //Preload High Score Array
-var highScoreArray = [['Mark', 7],['David', 2],['Sally', 17]];
+var highScoreArray = [{userName:'Mark', highScore:7},{userName:'David', highScore: 2},{userName:'Sally', highScore: 17}];
 
 //Preload Smack Talk Array
 // https://www.rappad.co/insult-generator
@@ -290,3 +292,30 @@ function handleClickOnImg(event) {
     playerChoiceImgEl.id = 'spock-choice';
   }
 }
+
+//Function to store data in local storage
+var updateLS = function(){
+  var allPlayersData = JSON.stringify(allPlayers);
+  localStorage.setItem('allPlayersLS', allPlayersData);
+
+  var highScoreData = JSON.stringify(highScoreArray);
+  localStorage.setItem('highScoresLS', highScoreData);
+};
+
+
+
+//Function to retrieve data from local storage
+var retreiveLS = function(){
+  if(allPlayersLS !== 0) {
+    var retrievedData = localStorage.getItem('allPlayersLS');
+    allPlayers = JSON.parse(retrievedData);
+  }
+  if(highScoresLS !== 0){
+    var retrieveHighScores = localStorage.getItem(highScoresLS);
+    highScoreArray = JSON.parse(retrieveHighScores);
+  }
+};
+
+updateLS();
+retreiveLS();
+
