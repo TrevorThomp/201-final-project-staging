@@ -290,3 +290,22 @@ function handleClickOnImg(event) {
     playerChoiceImgEl.id = 'spock-choice';
   }
 }
+
+//Function to store data in local storage
+var updateLS = function(){
+  var allPlayersData = JSON.stringify(allPlayers);
+  localStorage.setItem('allPlayersLS', allPlayersData);
+};
+
+var allPlayersLS;
+
+//Function to retrieve data from local storage
+var retreiveLS = function(){
+  if(allPlayersLS !== 0) {
+    var retrievedData = localStorage.getItem('allPlayersLS');
+    allPlayers = JSON.parse(retrievedData);
+  }
+};
+
+updateLS();
+retreiveLS();
