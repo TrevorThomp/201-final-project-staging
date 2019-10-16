@@ -17,9 +17,6 @@ var smackTalkArr = [
   'YOU\'RE AS USELESS AS A PHONE WITH 1% REMAINING BATTERY LIFE.',
   'YOU COULDN\'T POUR WATER OUT OF A BOOT IF THE INSTRUCTIONS WERE ON THE HEEL.',
   'ARE YOU ALWAYS AN IDIOT, OR JUST WHEN I\'M AROUND?',
-  ' YO MAMA IS SO STUPID THAT SHE THINKS TIGER WOODS IS A FOREST.',
-  'YO MAMA\'S SO SKINNY, SHE CAN GRATE CHEESE ON HER RIBS',
-  'YO MAMA IS SO SHORT THAT SHE CAN LIMBO UNDER THE DOOR.',
   'Pompous Blossum',
   'Insecure Waffle',
   'Tattletale',
@@ -33,7 +30,6 @@ var smackTalkArr = [
   'WHY DON\'T YOU SLIP INTO SOMETHING MORE COMFORTABLE -- LIKE A COMA.',
   'SOME PEOPLE ARE HAS-BEENS. YOU ARE A NEVER-WAS.',
   'IN THE LAND OF THE WITLESS, THE HALF-WIT IS KING.',
-  'I CERTAINLY HOPE YOU ARE STERILE.',
   'YOU\'RE AS USELESS AS AN ASHTRAY ON A BIKE.',
   'DON\'T YOU LOVE NATURE, DESPITE WHAT IT DID TO YOU?',
   'SOME DRINK FROM THE FOUNTAIN OF KNOWLEDGE; YOU ONLY GARGLED.',
@@ -41,7 +37,21 @@ var smackTalkArr = [
   'I WOULD HAVE LIKED TO INSULT YOU, BUT WITH YOUR INTELLIGENCE YOU WOULDN\'T GET OFFENDED.',
   'YOU SHOULD TOSS OUT MORE OF YOUR FUNNY REMARKS; THAT\'S ALL THEY\'RE GOOD FOR.',
   'I\'VE BEEN CALLED WORSE THINGS BY BETTER PEOPLE',
-  'KEEP TALKING, SOMEDAY YOU\'LL SAY SOMETHING INTELLIGENT!'
+  'KEEP TALKING, SOMEDAY YOU\'LL SAY SOMETHING INTELLIGENT!',
+  'I would love to spend every minute of every day with you, but some days I actually have to get stuff done.',
+  'You\'re someone I pretend to not see in public.',
+  'Out of all my friends you are the best at being single.',
+  'You inspire me and most likely strangers. Also, friends and stalkers. You are the inspiration to many.',
+  'I don\'t know if sarcasm is a skill, but you\'ve certainly mastered it.',
+  'You\'re just as pretty as all the layers you hide behind.',
+  'Talking to you is the best part of my day, aside from when I\'m sleeping and when I\'m eating.',
+  'You\'re the nothing when people ask me whats on my mind.',
+  'You are awkward, in a cute way. Like an elevator ride, but with puppies.',
+  'Just like an untrained puppy. I\'d really like to take you out.',
+  'I\'m not insulting you, I\'m describing you.',
+  'Maybe you should eat some makeup so you can be pretty on the inside too.',
+  'I\'m really good at people-watching. I\'m so glad I can share that hobby on you.',
+  'You\'re not lazy, just that the people around you are way too active.'
 ];
 
 var smackTalkDisplay = function() {
