@@ -1,5 +1,8 @@
 'use strict';
 
+//Preload High Score Array
+var highScoreArray = [{userName:'Mark', highScore:7},{userName:'David', highScore: 2},{userName:'Sally', highScore: 17}];
+
 function highScoreDOM(){
   var ol = document.getElementById('highscores');
   for (var i = 0; i < highScoreArray.length; i++){
