@@ -8,6 +8,12 @@ body {
   color: #00AAFF;
 }
 
+#player-name {
+  font-family: 'Ranchers', cursive;
+  font-size: 1.5em;
+  text-align: center;
+}
+
 h1 {
   font-family: 'Ranchers', cursive;
   font-size: 4em;
@@ -44,7 +50,7 @@ ol {
   display: inline;
 }
 
-a {
+#ul-nav li>a {
   text-decoration: none;
   color: #00AAFF;
 }
@@ -69,15 +75,50 @@ a {
 }
 
 #scoreboard {
-  margin: 20px auto;
+  margin: 40px auto;
   width: 45%;
-  border: 4px solid #FFCC00;
+  position: relative;
+  background: black;
   border-radius: 10px;
-
   color: rgb(255, 204, 0);
   letter-spacing: 2px;
-  margin-top: 30px;
+  margin-bottom: 60px;
   text-align: center;
+}
+
+/* Gradient Border Sourced by: https://codepen.io/Antonio-R-A-M/pen/GPdNVN */
+#scoreboard::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  z-index: -1;
+  animation: anim 8s linear infinite;
+  border-radius: 5px;
+}
+
+#scoreboard::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  z-index: -2;
+  animation: anim 8s linear infinite;
+  border-radius: 5px;
+  filter: blur(1rem);
+}
+
+@keyframes anim {
+  from {background-position: 0}
+  to {background-position: 400%}
 }
 
 #overlay {
@@ -188,10 +229,17 @@ a {
   cursor: pointer;
 }
 
-#scoreboard span {
+
+/* Gradient Button Sourced: https://codepen.io/Antonio-R-A-M/pen/GPdNVN */
+.scores {
   font-size: 5em;
-  color:  #CD00FF;
+  color:  #ffffff;
   font-family: 'VT323', monospace;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: anim 8s linear infinite;
 }
 
 #play-again-modal {
@@ -253,13 +301,16 @@ a {
 }
 
 footer {
+  margin: 30px 0px;
   color: #3150BC;
   font-size: .8em;
   margin-top: 1.5em;
+
 }
 
-#attribution {
-  margin-top: 10px;
+footer a {
+  color: #3150BC;
+  text-decoration: none;
 }
 
 /* INSTRUCTIONS PAGE STYLING   */
