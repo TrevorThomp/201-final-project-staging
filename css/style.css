@@ -255,6 +255,7 @@ a {
 footer {
   color: #3150BC;
   font-size: .8em;
+  margin-top: 1.5em;
 }
 
 #attribution {
@@ -292,3 +293,6 @@ footer {
   color: #00AAFF;
 }
 
+#send {
+  font-size: 1.5em;
+}
