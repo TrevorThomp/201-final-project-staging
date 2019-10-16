@@ -11,6 +11,7 @@ var spock = document.getElementById('spock');
 var bottomChatHeader = document.getElementById('bottomChatHeader');
 var bottomChatText = document.getElementById('bottomChatText');
 var user = null;
+var playerName = '';
 
 //Preload Smack Talk Array
 // https://www.rappad.co/insult-generator
@@ -147,10 +148,10 @@ var winRound = function () {
   if (playerScore === 5) {
     user.personalScore += 10;
     updateLS();
-    alert('You Won!');
+    alert('Congratulations ' + document.getElementById('player-name').value + '.  You Won!');
     playAgainModalDisplay();
   } else if (compScore === 5) {
-    alert('You Lose!');
+    alert('Sorry' + document.getElementById('player-name').value + '. You Lose!');
     playAgainModalDisplay();
   }
 };
