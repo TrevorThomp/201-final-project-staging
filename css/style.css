@@ -64,6 +64,118 @@ a {
   width: 45%;
   border: 4px solid #FFCC00;
   border-radius: 10px;
+
+  color: rgb(255, 204, 0);
+  letter-spacing: 2px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#overlay {
+  display: flex; /* Hidden by default */
+  flex-direction: column;
+  position: fixed; /* Sit on top of the page content */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/overlay-background.jpg);
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#input-container {
+  display: block;
+  margin-top: 450px;
+  text-align: center;
+}
+
+#input-container label {
+  display: block;
+  font-size: 1.3em;
+  color: rgb(255, 204, 0);
+  font-family: 'Ranchers', cursive;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#input-container input {
+  display: block;
+  padding: 10px;
+  margin: 30px auto;
+  border-radius: 10px;
+  outline: none;
+  width: 50%;
+}
+
+/* Button Source: https://codepen.io/AlainBarrios/pen/eKYgog */
+
+#enter-button{
+  text-transform: uppercase;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: 'Ranchers', cursive;
+  padding: 10px;
+  letter-spacing: 1px;
+  background-image: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 30px;
+  position: relative;
+  border: none;
+}
+
+#enter-button:before{
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background-image: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 30px;
+  opacity: 1;
+  transition: filter .5s, opacity .5s;
+}
+
+#enter-button, #enter-button::before{
+  animation: animate 8s linear reverse forwards;
+}
+
+#enter-button:hover,
+#enter-button:hover:before{
+  animation: animate 8s linear infinite;
+  cursor: pointer;
+}
+
+#enter-button:hover:before{
+  filter: blur(20px);
+  opacity: 1;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+
+@keyframes animate2{
+  0%{
+    background-position: 400%;
+  }
+  100%{
+    background-position: 0%;
+  }
+}
+
+.choice {
+  height: 100px;
+  cursor: pointer;
 }
 
 #scoreboard span {
@@ -82,6 +194,7 @@ a {
   margin: 0 auto;
   padding: 15px;
 }
+
 
 #ul-choices li {
   display: inline;
@@ -168,5 +281,3 @@ footer {
   color: #00AAFF;
 }
 
-
-/* SCOREBOARD PAGE STYLING*/

@@ -5,7 +5,38 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   margin: 10px;
+
   color: #00AAFF;
+}
+
+h1 {
+  font-family: 'Ranchers', cursive;
+  font-size: 4em;
+  color: rgb(255, 204, 0);
+  letter-spacing: 2px;
+  margin-top: 30px;
+}
+
+#div-showdown {
+  text-align: center;
+}
+
+#div-weapons {
+  margin-top: 100px;
+  text-align: center;
+}
+
+#ul-weapons {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+
+.choice {
+  height: 100px;
+  cursor: pointer;
 }
 
 p {

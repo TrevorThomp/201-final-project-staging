@@ -3,17 +3,12 @@
 // Global Variables
 var playerScore = 0;
 var compScore = 0;
-var numberOfRounds = 0;
 var rock = document.getElementById('rock');
 var paper = document.getElementById('paper');
 var scissors = document.getElementById('scissors');
 var lizard = document.getElementById('lizard');
 var spock = document.getElementById('spock');
-var allPlayersLS;
-var highScoresLS;
-
-//Preload High Score Array
-var highScoreArray = [{userName:'Mark', highScore:7},{userName:'David', highScore: 2},{userName:'Sally', highScore: 17}];
+var user = null;
 
 //Preload Smack Talk Array
 // https://www.rappad.co/insult-generator
@@ -51,27 +46,40 @@ var smackTalkArr = [
 
 var smackTalkDisplay = function() {
   var textDisplay = document.getElementById('array-text');
-  var randomNumber = Math.floor(Math.random() * 5);
+  var randomNumber = Math.floor(Math.random() * smackTalkArr.length);
   textDisplay.textContent = smackTalkArr[randomNumber];
 };
 
 //Create Constructor Function
-var allPlayers = [];
-
 var CreatePlayer = function(userName){
   this.userName = userName;
-  allPlayers.push(this);
+  this.personalScore = 0;
+  CreatePlayer.allPlayers.push(this);
+};
+CreatePlayer.allPlayers = [];
+
+//Function to store data in local storage
+var updateLS = function(){
+  var allPlayersData = JSON.stringify(CreatePlayer.allPlayers);
+  localStorage.setItem('allPlayersLS', allPlayersData);
 };
 
 function submitForm(e){
   e.preventDefault();
   var name = e.target.name.value;
-  var user = new CreatePlayer(name);
+  user = new CreatePlayer(name);
+  updateLS();
 }
 
 // Holly turned the following off temporarily because the game wasn't working with it on
 // var form = document.getElementById('enterarcade');
 // form.addEventListener('submit', submitForm);
+
+var button = document.getElementById('enter-button');
+var overlay = document.getElementById('overlay');
+button.addEventListener('click', function() {
+  overlay.style.display = 'none';
+});
 
 var updateScore = function() {
   var userScore = document.getElementById('userScore');
@@ -82,6 +90,8 @@ var updateScore = function() {
 
 var winRound = function () {
   if (playerScore === 5) {
+    user.personalScore += 10;
+    updateLS();
     alert('You Won!');
   } else if (compScore === 5) {
     alert('You Lose!');
@@ -294,29 +304,4 @@ function handleClickOnImg(event) {
   }
 }
 
-//Function to store data in local storage
-var updateLS = function(){
-  var allPlayersData = JSON.stringify(allPlayers);
-  localStorage.setItem('allPlayersLS', allPlayersData);
-
-  var highScoreData = JSON.stringify(highScoreArray);
-  localStorage.setItem('highScoresLS', highScoreData);
-};
-
-
-
-//Function to retrieve data from local storage
-var retreiveLS = function(){
-  if(allPlayersLS !== 0) {
-    var retrievedData = localStorage.getItem('allPlayersLS');
-    allPlayers = JSON.parse(retrievedData);
-  }
-  if(highScoresLS !== 0){
-    var retrieveHighScores = localStorage.getItem(highScoresLS);
-    highScoreArray = JSON.parse(retrieveHighScores);
-  }
-};
-
-updateLS();
-retreiveLS();
-
+retrieveLS();
