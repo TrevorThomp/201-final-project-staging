@@ -24,6 +24,15 @@ h2 {
   margin: 20px 0px;
 }
 
+ol { 
+  list-style-type: decimal; 
+  list-style-position: inside; 
+}
+
+.high-scores {
+  padding: 10px;
+}
+
 #ul-nav {
   margin-top: 20px;
   color: #00AAFF;
