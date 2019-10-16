@@ -4,6 +4,7 @@
 var highScoreArray = [{userName:'Mark', personalScore:7},{userName:'David', personalScore: 2},{userName:'Sally', personalScore: 17}];
 
 //Function to retrieve data from local storage
+// Trevor moved to this file so we are able to pull data from LS to highscores.html
 var retrieveLS = function(){
   var retrievedData = localStorage.getItem('allPlayersLS');
   playerData = JSON.parse(retrievedData);
@@ -12,7 +13,6 @@ var retrieveLS = function(){
     CreatePlayer.allPlayers = userData;
   }
 };
-
 
 function highScoreDOM(arr){
   var ol = document.getElementById('highscores');

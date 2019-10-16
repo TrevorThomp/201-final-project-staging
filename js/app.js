@@ -303,5 +303,3 @@ function handleClickOnImg(event) {
     playerChoiceImgEl.id = 'spock-choice';
   }
 }
-
-retrieveLS();
