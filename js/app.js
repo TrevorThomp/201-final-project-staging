@@ -66,14 +66,15 @@ var updateLS = function(){
 
 function submitForm(e){
   e.preventDefault();
-  var name = e.target.name.value;
+  var input = document.getElementById('player-name');
+  var name = input.value;
   user = new CreatePlayer(name);
   updateLS();
 }
 
 // Holly turned the following off temporarily because the game wasn't working with it on
-// var form = document.getElementById('enterarcade');
-// form.addEventListener('submit', submitForm);
+var form = document.getElementById('enterarcade');
+form.addEventListener('submit', submitForm);
 
 var button = document.getElementById('enter-button');
 var overlay = document.getElementById('overlay');
