@@ -60,6 +60,7 @@ var CreatePlayer = function(userName){
   this.userName = userName;
   this.personalScore = 0;
   CreatePlayer.allPlayers.push(this);
+  updateLS();
 };
 CreatePlayer.allPlayers = [];
 
@@ -69,12 +70,20 @@ var updateLS = function(){
   localStorage.setItem('allUsers', allPlayersData);
 };
 
+var retrieveLS = function(){
+  var retrievedData = localStorage.getItem('allUsers');
+  var playerData = JSON.parse(retrievedData);
+
+  if(playerData !== null) {
+    CreatePlayer.allPlayers = playerData;
+  }
+};
+
 function submitForm(e){
   e.preventDefault();
   var input = document.getElementById('player-name');
   var name = input.value;
   user = new CreatePlayer(name);
-  updateLS();
 }
 
 var form = document.getElementById('enterarcade');
