@@ -15,7 +15,6 @@ function highScoreDOM(arr){
 }
 
 var getScores = JSON.parse(localStorage.getItem('allUsers'));
-console.log(getScores);
 
 // https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
 
