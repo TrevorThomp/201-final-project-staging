@@ -457,6 +457,7 @@ footer a {
 }
 
 
+/* Media Queries */
 @media (min-width: 768px) {
   #playerName-container {
     margin: 40px 0px 0px 70px;
