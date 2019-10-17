@@ -12,4 +12,4 @@ Create a fun arcade game for users of all ages that can easily be played on any 
 
 - Holly Davis
 - Mark Swearingen
-- Trevor Thompson
+- Trevor Thompson 
