@@ -1,3 +1,4 @@
+/* Global Selectors */
 li {
   display: inline;
 }
@@ -8,6 +9,11 @@ p {
   margin-bottom: 10px;
 }
 
+ul img {
+  padding: 10px;
+}
+
+/* Class Selectors */
 .career {
   margin: 0px auto;
   width: 80%
@@ -17,12 +23,9 @@ p {
   margin-top: 20px;
 }
 
+/* ID Selectors */
 #imgtrevor, #imgmark, #imgholly {
   margin-top: 30px;
   border-radius: 10px;
   border: 7px solid rgb(255, 204, 0);
-}
-
-ul img {
-  padding: 10px;
 }
