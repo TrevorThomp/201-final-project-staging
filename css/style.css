@@ -434,6 +434,26 @@ hr {
   width: 90%
 }
 
+/* Audio Buttons */
+.audio-button {
+  width: 10%;
+  padding: 5px;
+} 
+
+.audio-button:hover {
+  cursor: pointer;
+}
+
+#audio-container {
+  position: absolute;
+  bottom: 8%;
+  right: 20%;
+}
+
+#div-stack {
+  position: relative;
+}
+
 /* INSTRUCTIONS PAGE STYLING   */
 #instructions {
   margin: 0 auto; 
@@ -533,6 +553,25 @@ hr {
   #input-container {
     margin-top: 300px;
   }
+
+  /* Audio Buttons */
+.audio-button {
+  width: 20%;
+} 
+
+.audio-button:hover {
+  cursor: pointer;
+}
+
+#audio-container {
+  position: absolute;
+  top: 2%;
+  right: 0%;
+}
+
+#div-stack {
+  position: relative;
+}
 
   #ol-instructions {
     margin-left: 25%;

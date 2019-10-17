@@ -302,4 +302,25 @@ function handleClickOnImg(event) {
   }
 }
 
+// Adjust audio volume
+function audioVolume() {
+  var audio = document.querySelector('audio');
+  audio.volume = 0.1;
+}
+
+function audioDisplay() {
+  var audio = document.querySelector('audio');
+  var imagePlay = document.getElementById('audio-play');
+  var imageMute = document.getElementById('audio-mute');
+
+  imagePlay.addEventListener('click', function() {
+    audio.play();
+  });
+  imageMute.addEventListener('click', function() {
+    audio.pause();
+  });
+}
+
+audioDisplay();
+audioVolume();
 retrieveLS();
