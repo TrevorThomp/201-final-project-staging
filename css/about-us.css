@@ -1,27 +1,5 @@
-body {
-  background-image: url(../img/starbackground.svg);
-  /* setting the width controls the star size */
-  background-size: 400px;
-  font-family: 'Josefin Sans', sans-serif;
-  text-align: center;
-  margin: 10px;
-  color: #00AAFF;
-}
-
-h1 {
-  font-family: 'Ranchers', cursive;
-  font-size: 4em;
-  letter-spacing: 2px;
-  margin-top: 30px;
-}
-
 li {
   display: inline;
-}
-
-.choice {
-  height: 100px;
-  cursor: pointer;
 }
 
 p {

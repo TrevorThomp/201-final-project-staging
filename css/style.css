@@ -54,6 +54,8 @@ ol {
   padding: 15px;
   font-weight: 600;
   display: inline;
+  /* Puts space between two lines of navigation when window is small */
+  line-height: 30px;
 }
 
 #ul-nav li>a {
@@ -422,6 +424,17 @@ footer a {
   text-decoration: none;
 }
 
+p {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: .5px solid #CD00FF;
+  width: 90%
+}
+
 /* INSTRUCTIONS PAGE STYLING   */
 #instructions {
   margin: 0 auto; 
@@ -454,6 +467,8 @@ footer a {
 
 #send {
   font-size: 1.5em;
+  color: #00AAFF;
+  line-height: 50px;
 }
 
 
