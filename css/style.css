@@ -16,7 +16,7 @@ body {
 
 h1 {
   font-family: 'Ranchers', cursive;
-  font-size: 4em;
+  font-size: 3.5em;
   color: #FFCC00;
   letter-spacing: 2px;
   margin-top: 2%;
@@ -144,7 +144,7 @@ ol {
 
 #input-container {
   display: block;
-  margin-top: 150px;
+  margin-top: 125px;
   text-align: center;
 }
 
