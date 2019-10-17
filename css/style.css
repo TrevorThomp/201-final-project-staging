@@ -434,6 +434,25 @@ hr {
   width: 90%
 }
 
+/* Audio Buttons */
+.audio-button {
+  width: 20%;
+} 
+
+.audio-button:hover {
+  cursor: pointer;
+}
+
+#audio-container {
+  position: absolute;
+  top: 2%;
+  right: 0%;
+}
+
+#div-stack {
+  position: relative;
+}
+
 /* INSTRUCTIONS PAGE STYLING   */
 #instructions {
   margin: 0 auto; 
