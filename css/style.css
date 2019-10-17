@@ -494,6 +494,10 @@ hr {
   .img-showdown {
     width: 25%;
   }
+
+  #ol-instructions {
+    margin-left: 12%;
+  }
 }
 
 #divider {
@@ -528,5 +532,9 @@ hr {
 
   #input-container {
     margin-top: 300px;
+  }
+
+  #ol-instructions {
+    margin-left: 25%;
   }
 }
