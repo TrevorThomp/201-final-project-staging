@@ -526,7 +526,7 @@ hr {
   }
 
   #divider {
-    height: 350px;
+    height: 300px;
     margin-top: 10px;
   }
 
@@ -537,5 +537,4 @@ hr {
   #ol-instructions {
     margin-left: 25%;
   }
-
 }
