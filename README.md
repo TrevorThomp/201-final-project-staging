@@ -4,6 +4,10 @@ An 80's style space-themed arcade game. The game is rock-paper-scissors-lizard-S
 
 We had a ton of fun creating this app and hope you enjoy it!
 
+## Problem Domain
+
+Create a fun arcade game for users of all ages that can easily be played on any mobile device, tablet, or computer.
+
 ## Collaborators
 
 - Holly Davis
