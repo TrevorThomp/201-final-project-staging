@@ -514,6 +514,10 @@ hr {
   .img-showdown {
     width: 25%;
   }
+
+  #ol-instructions {
+    margin-left: 12%;
+  }
 }
 
 #divider {
@@ -568,4 +572,8 @@ hr {
 #div-stack {
   position: relative;
 }
+
+  #ol-instructions {
+    margin-left: 25%;
+  }
 }
