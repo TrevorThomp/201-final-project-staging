@@ -471,6 +471,12 @@ hr {
   line-height: 50px;
 }
 
+#video {
+  margin: 20px;
+  border-radius: 10px;
+  border: 7px solid #FFCC00;
+}
+
 
 /* Media Queries */
 @media (min-width: 768px) {
