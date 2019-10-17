@@ -302,4 +302,11 @@ function handleClickOnImg(event) {
   }
 }
 
+// Adjust audio volume
+function audioVolume() {
+  var audio = document.querySelector('audio');
+  audio.volume = 0.1;
+}
+
+audioVolume();
 retrieveLS();
