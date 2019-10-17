@@ -19,7 +19,7 @@ h1 {
   font-size: 4em;
   color: #FFCC00;
   letter-spacing: 2px;
-  margin-top: 30px;
+  margin-top: 2%;
 }
 
 #h1-logo a {
@@ -32,7 +32,7 @@ h2 {
   font-size: 2em;
   color: #FFCC00;
   letter-spacing: 2px;
-  margin: 20px 0px;
+  margin: 2% 0px;
 }
 
 ol { 
@@ -46,12 +46,12 @@ ol {
 }
 
 #ul-nav {
-  margin-top: 20px;
+  margin-top: 2%;
   color: #00AAFF;
 }
 
 #ul-nav li {
-  padding: 15px;
+  padding: 1%;
   font-weight: 600;
   display: inline;
 }
@@ -81,7 +81,7 @@ ol {
 }
 
 #scoreboard {
-  margin: 40px auto;
+  margin: 20px auto;
   width: 35%;
   position: relative;
   background: black;
@@ -382,11 +382,11 @@ ol {
 
 #divider {
   margin: 0px 20px;
-  height: 200px;
+  height: 120px;
 }
 
 #div-weapons {
-  margin-top: 5%;
+  margin-top: 1%;
   text-align: center;
 }
 
@@ -396,11 +396,11 @@ ol {
 }
 
 #smackTalk {
-  margin-top: 50px;
+  margin-top: 3%;
 }
 
 #bottomChatHeader {
-  margin-bottom: 10px;
+  margin-bottom: 1%;
   font-size: 2em;
 }
 
@@ -474,6 +474,10 @@ footer a {
   }
 }
 
+#divider {
+  height: 140px;
+}
+
 @media (min-width: 1024px) {
   #playerName-container {
     margin: 40px 0px 0px 200px;
@@ -492,7 +496,7 @@ footer a {
   }
 
   #divider {
-    height: 400px;
+    height: 300px;
   }
 
   #input-container {
