@@ -435,19 +435,22 @@ hr {
 }
 
 /* Audio Buttons */
-.audio-button {
+.audio-button,
+.un-mute,
+.mute{
   width: 10%;
   padding: 5px;
 } 
 
-.audio-button:hover {
+.audio-button:hover,
+.un-mute,
+.mute {
   cursor: pointer;
 }
 
 #audio-container {
   position: absolute;
   bottom: 8%;
-  right: 20%;
 }
 
 #div-stack {
@@ -555,11 +558,15 @@ hr {
   }
 
   /* Audio Buttons */
-.audio-button {
-  width: 12%;
+.audio-button,
+.un-mute,
+.mute {
+  width: 25%;
 } 
 
-.audio-button:hover {
+.audio-button:hover,
+.un-mute,
+.mute {
   cursor: pointer;
 }
 
