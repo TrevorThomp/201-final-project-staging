@@ -438,7 +438,7 @@ hr {
 .audio-button,
 .un-mute,
 .mute{
-  width: 10%;
+  width: 25%;
   padding: 5px;
 } 
 
@@ -449,8 +449,9 @@ hr {
 }
 
 #audio-container {
-  position: absolute;
-  bottom: 8%;
+  position: fixed;
+  bottom: 9%;
+  right: 4%;
 }
 
 #div-stack {
