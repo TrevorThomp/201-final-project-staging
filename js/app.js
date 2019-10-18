@@ -310,14 +310,18 @@ function audioVolume() {
 
 function audioDisplay() {
   var audio = document.querySelector('audio');
-  var imagePlay = document.getElementById('audio-play');
-  var imageMute = document.getElementById('audio-mute');
+  var imagePlay = document.querySelector('.mute');
 
   imagePlay.addEventListener('click', function() {
-    audio.play();
-  });
-  imageMute.addEventListener('click', function() {
-    audio.pause();
+    if (imagePlay.className === 'mute') {
+      imagePlay.className = 'un-mute';
+      audio.play();
+      imagePlay.src = './img/sound.svg';
+    } else {
+      imagePlay.className = 'mute';
+      audio.pause();
+      imagePlay.src = './img/mute.svg';
+    } 
   });
 }
 
