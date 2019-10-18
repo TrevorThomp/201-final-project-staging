@@ -85,6 +85,8 @@ ol {
 #scoreboard {
   margin: 20px auto;
   width: 35%;
+  min-width: 127px;
+  max-height: 80px;
   position: relative;
   background: black;
   border-radius: 10px;
