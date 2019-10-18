@@ -449,7 +449,7 @@ hr {
 }
 
 #audio-container {
-  position: fixed;
+  display: none;
   bottom: 9%;
   right: 4%;
 }
@@ -572,6 +572,7 @@ hr {
 }
 
 #audio-container {
+  display: block;
   position: absolute;
   top: 2%;
   right: 0%;
